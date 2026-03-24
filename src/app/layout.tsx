@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
+const inter = Inter({
+  subsets: ["latin"],
+});
+
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -13,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen">{children}</body>
+       <body className={`${inter.className} flex justify-center`}>
+        <div className="w-full max-w-[1500px] px-4">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

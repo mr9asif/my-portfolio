@@ -1,10 +1,23 @@
+import Blogs from "@/components/Blogs";
+import Contact from "@/components/Contact";
+import Education from "@/components/Education";
+import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
+
 export default function Home() {
   return (
-    <main className="p-10">
-      <h1 className="text-3xl font-bold">My Portfolio</h1>
-      <p className="mt-4 text-gray-600">
-        Welcome! This is my portfolio website.
-      </p>
-    </main>
+    <>
+      <Navbar />
+      <Hero />
+      <Skills />
+      <Projects />
+      <Education />
+      <Blogs />
+      <Contact />
+      <Footer />
+    </>
   );
 }
