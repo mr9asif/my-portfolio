@@ -1,3 +1,7 @@
+import { connectDB } from "@/lib/db";
+
 export async function GET() {
-  return Response.json({ message: "Projects API working" });
+  await connectDB();
+
+  return Response.json({ message: "Check terminal for DB status" });
 }
